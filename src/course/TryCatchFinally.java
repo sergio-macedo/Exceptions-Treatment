@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class ProgramFinally {
+public class TryCatchFinally {
     public static void main(String[] args) {
         File file = new File("C:\\dev\\in.txt");
         Scanner sc = null;
