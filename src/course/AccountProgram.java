@@ -11,7 +11,7 @@ public class AccountProgram {
 
         Scanner sc = new Scanner(System.in);
 
-        try{
+        try {
             System.out.println("Enter account data");
             System.out.println("Enter account number");
             int number = sc.nextInt();
@@ -23,7 +23,7 @@ public class AccountProgram {
             System.out.print("Enter account withdraw limit");
             Double withdrawLimit = sc.nextDouble();
 
-            Account account = new Account(number,holder,balance,withdrawLimit);
+            Account account = new Account(number, holder, balance, withdrawLimit);
 
             System.out.println("Enter the amount for withdraw");
             double amount = sc.nextDouble();
@@ -31,8 +31,7 @@ public class AccountProgram {
             account.withdraw(amount);
 
             System.out.println(" New balance" + account);
-        }
-        catch (InputMismatchException e ) {
+        } catch (InputMismatchException e) {
             System.out.println("please type numbers , not letters");
         }
 

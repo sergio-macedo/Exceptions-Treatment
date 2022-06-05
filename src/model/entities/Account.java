@@ -52,14 +52,13 @@ public class Account {
     public void deposit(double amount) {
         balance += amount;
     }
+
     public void withdraw(double amount) {
-        if(amount > getWithdrawLimit()) {
+        if (amount > getWithdrawLimit()) {
             System.out.println("Withdraw error: The amount exceeds withdraw limit");
-        }
-        else if(amount > getBalance() && amount < getWithdrawLimit()) {
+        } else if (amount > getBalance() && amount < getWithdrawLimit()) {
             System.out.println("Withdraw error : Not enough balance");
-        }
-        else {
+        } else {
             balance -= amount;
             System.out.println(balance);
         }
