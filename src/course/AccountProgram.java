@@ -1,6 +1,7 @@
 package course;
 
 import model.entities.Account;
+import model.exceptions.BusinessException;
 
 import java.util.Date;
 import java.util.InputMismatchException;
@@ -33,8 +34,8 @@ public class AccountProgram {
             account.withdraw(amount);
 
             System.out.println(account);
-        } catch (InputMismatchException e) {
-            System.out.println("please type numbers using a dot, not a comma");
+        } catch (BusinessException e) {
+            System.out.println(e.getMessage());
         }
 
 
