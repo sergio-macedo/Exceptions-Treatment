@@ -4,12 +4,14 @@ import model.entities.Account;
 
 import java.util.Date;
 import java.util.InputMismatchException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class AccountProgram {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        Locale.setDefault(Locale.US);
 
         try {
             System.out.println("Enter account data");
@@ -30,9 +32,9 @@ public class AccountProgram {
 
             account.withdraw(amount);
 
-            System.out.println(" New balance" + account);
+            System.out.println(account);
         } catch (InputMismatchException e) {
-            System.out.println("please type numbers , not letters");
+            System.out.println("please type numbers using a dot, not a comma");
         }
 
 

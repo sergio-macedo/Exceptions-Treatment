@@ -60,7 +60,6 @@ public class Account {
             System.out.println("Withdraw error : Not enough balance");
         } else {
             balance -= amount;
-            System.out.println(balance);
         }
 
     }
